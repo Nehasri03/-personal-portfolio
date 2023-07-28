@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5b335c143d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+    <nav>
+<img src="images/logo1.png" class="logo">
+<ul id="sidemenu">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    
+</ul>
+<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
+   <div class="header-text">
+    <p>Frontend Web Developer</p>
+    <h2>Hi, I'm <span>Palini</span> from <br>  Emeralds Degree College, <br>Tirupati</h2>
+   </div>
+</div>
+ </div> 
+ <!-------------------------About----------------------------->
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png"  >
+            </div>
+            <div class="about-col-2">
+           <h1 class="sub-title">About me</h1>
+         <p>I am currently pursuing my degree in Bachler of  Science in computer Science .Proficiency in office software such as MS Word, Excel, Google 
+            Docs and Computer skills.Worked in Robotic Process Automation (RPA) Virtual Internship at Blue 
+            Prism Foundation
+            </p>
+
+       <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+       </div>
+         <div class="tab-contents  active-tab" id="skills">
+            
+            <ul>
+                <li><span>Frontend Developer</span><br>Designing Web Interface</li>
+                <li><span>web development</span><br>Web App Development</li> 
+                <li><span>App Development</span><br>Designing Android Apps</li>
+            </ul>
+         </div>
+
+         <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>2023</span><br>Frontend Development</li>
+                <li><span>2022</span><br>HTML & css</li> 
+                <li><span>2021</span><br>Javavscript</li>
+            </ul>
+         </div>
+
+         <div class="tab-contents" id="education">
+            <ul>
+                <li><span>2023</span><br>Graduation in BSC in computer Science</li>
+                <li><span>2020</span><br>Board of Intermediate Education</li> 
+                <li><span>2018</span><br>Board of Secondary Education</li>
+            </ul>
+         </div>
+
+            </div>
+        </div>
+    </div>
+ </div> 
+<!----------------services------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Identifies the goals of a website or webpages and promotes accessibility for all potential users. This process involves organizing content and images a series of pages and integrating applications and other iterative elements. Web design is the process of planning conceptualizing and arranging content online. Today designing a website goes beyond aesthetics to include the website overall functionality. Web Design also include web app, mobile app and user interface design.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Frontend Development</h2>
+                <p>Frontend development is a area of web development that focuses on the user interface. It is all about converting the backend code into a graphical interface. The frontend makes the data easy to read and understand. A Frontend Developer is someone who creates website and web application. The difference between frontend and backend is that frontend refers to hpw a webpage looks, while backend refers to how it works.You can think of frontend as client-side and backend a server-side.   </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                               <p> App Design is an ongoing process comprising user experience  and user interface elements. Designers ideate, define solutions, create the apps flow and structure, and make stylistic choices from colors and fonts.
+                                This couse has been developed to help students to understand how app development works and enables them to get an introduction to app design elements on the plezmo platform. </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------portfolio----------->
+<div id="portfolio">
+  <div class="container">
+   
+
+<!-----------------contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> palu03@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i> 9863498014</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+             
+            </div>
+            <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @Emeralds degree college. All rights reserved</p>
+    </div>
+</div>
+
+
+
+ <script>
+
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname){
+   for(tablink of tablinks){
+     tablink.classList.remove("active-link");
+   }
+   for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+   }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+   }
+
+ </script>
+ 
+ <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function  openmenu(){
+        sidemenu.style.right = "0";
+        }
+        function  closemenu(){
+        sidemenu.style.right = "-200px";
+        }
+
+
+  
+ </script>
+ 
+  
+ <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzMwsvxbAK6BsecHyGxHxJMTNhpuxTqBpVyD_DNufxKTpvt53Kx4OiA_8kaDf8e59x7/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<a class="gotopbtn" href="#"><img src="images/uparrow.png" alt="img" width="50" height="50"></i></a>
+
+</body>
+</html>
